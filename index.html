@@ -14,12 +14,14 @@
         rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Naver Maps SDK -->
+    <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=eoddr1f30i"></script>
 </head>
 
 <body>
     <header class="header">
         <div class="header-container">
-            <a href="#" class="logo">GREEN TERRA STUDIO 503</a>
+            <a href="#" class="logo">GREENTERRA STUDIO 503</a>
             <nav class="nav">
                 <a href="#about" class="nav-link">스튜디오 소개</a>
                 <a href="#facilities" class="nav-link">부대시설</a>
@@ -40,25 +42,18 @@
             <div class="hero-bg"></div>
             <div class="hero-content">
                 <h1 class="hero-title">
-                    <span class="fade-up">프리미엄 멀티 스튜디오,</span>
+                    <span class="fade-up">프리미엄 멀티 스튜디오</span>
                     <span class="fade-up delay-1">그린테라 스튜디오</span>
                 </h1>
                 <p class="hero-subtitle fade-up delay-2">최상의 촬영 환경과 완벽한 인프라를 제공합니다.</p>
 
                 <div class="hero-works fade-up delay-2">
-                    <!-- <p class="works-title">참여작품</p> -->
-                    <div class="works-list">
-                        <img src="assets/images/참여작품/img38.jpeg" alt="참여작품" loading="lazy">
-                        <img src="assets/images/참여작품/img39.jpeg" alt="참여작품" loading="lazy">
-                        <img src="assets/images/참여작품/img40.jpeg" alt="참여작품" loading="lazy">
-                        <img src="assets/images/참여작품/img41.jpeg" alt="참여작품" loading="lazy">
-                        <img src="assets/images/참여작품/img42.jpeg" alt="참여작품" loading="lazy">
-                        <img src="assets/images/참여작품/img43.jpeg" alt="참여작품" loading="lazy">
+                    <div class="works-list" id="heroWorksList">
                     </div>
                 </div>
 
-                <div class="fade-up delay-3">
-                    <a href="#about" class="btn btn-primary">자세히 보기</a>
+                <div class="fade-up delay-3" id="worksMoreContainer">
+                    <button id="btnLoadMoreWorks" class="btn btn-outline">작품 더보기</button>
                 </div>
             </div>
             <div class="scroll-indicator">
@@ -86,8 +81,7 @@
                                 <ul>
                                     <li>600평 (1,980㎡)</li>
                                     <li>층고 10m</li>
-                                    <li>전기용량 500Kw (건물 전체)</li>
-                                    <li>기둥 있음</li>
+                                    <li>전동 바텐 있음</li>
                                 </ul>
                             </div>
                             <div class="feature-item">
@@ -95,16 +89,17 @@
                                 <ul>
                                     <li>600평 (1,980㎡)</li>
                                     <li>층고 10m</li>
-                                    <li>기둥 거의 없음</li>
+                                    <li>전동 바텐 있음</li>
                                 </ul>
                             </div>
                             <div class="feature-item full-width">
                                 <h4>주요 시설 및 특징</h4>
                                 <ul>
+                                    <li>전기용량 500Kw (건물 전체)</li>
                                     <li>분장실 및 대기실 총 5개소 (1층), 공유 분장실 3개소</li>
                                     <li>냉난방기 스튜디오 내부 및 분장실 설치</li>
                                     <li>흡음공사 완료 및 지붕 빗물소리 방지용 차양막 설치</li>
-                                    <li>조용한 주위 환경</li>
+                                    <li>현장소장 상주</li>
                                 </ul>
                             </div>
                         </div>
@@ -147,7 +142,6 @@
                     <h2 class="section-title">스튜디오 전경</h2>
                 </div>
                 <div class="gallery-grid fade-up" id="galleryGrid">
-                    <!-- Images will be injected dynamically via JS -->
                 </div>
             </div>
         </section>
