@@ -69,8 +69,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (heroWorksList && btnLoadMoreWorks) {
         const worksData = [
-            'img38.jpeg', 'img39.jpeg', 'img40.jpeg', 'img41.jpeg', 'img42.jpeg', 'img43.jpeg',
-            // 향후 여기에 새로운 작품 이미지 파일명을 추가하세요 (예: 'img44.jpeg', 'img45.jpeg' ...)
+            '스프링피버.webp',
+            '선재업고튀어.webp',
+            '조선변호사.webp',
+            '멘탈코치제갈길.webp',
+            '비상선언.webp',
+            '멜랑꼴리아.webp',
+            '멀리서보면푸른봄.webp',
+            '오월의청춘.webp',
+            '빈센조.webp',
+            '낭만닥터김사부2.webp',
+            '호텔델루나.webp',
+            // 향후 여기에 새로운 작품 이미지 파일명을 추가하세요
         ];
 
         let currentDisplayCount = 0;
